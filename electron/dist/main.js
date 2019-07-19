@@ -4,7 +4,7 @@ var electron_1 = require("electron");
 var path = require("path");
 var url = require("url");
 var win;
-var fs = window.require("fs");
+// const fs = (<any>window).require("fs");
 electron_1.app.on('ready', createWindow);
 electron_1.app.on('activate', function () {
     if (win === null) {
@@ -12,7 +12,7 @@ electron_1.app.on('activate', function () {
     }
 });
 function createWindow() {
-    win = new electron_1.BrowserWindow({ width: 800, height: 600 });
+    win = new electron_1.BrowserWindow({ fullscreen: true });
     win.loadURL(url.format({
         pathname: path.join(__dirname, "/../../dist/angular-electron/index.html"),
         protocol: 'file:',
@@ -24,7 +24,7 @@ function createWindow() {
     });
 }
 electron_1.ipcMain.on('getFiles', function (event, arg) {
-    var files = fs.readdirSync(__dirname);
-    win.webContents.send('getFilesResponse', files);
+    // const files = fs.readdirSync(__dirname)
+    // win.webContents.send('getFilesResponse', files)
 });
 //# sourceMappingURL=main.js.map
