@@ -5,6 +5,8 @@ import * as url from 'url';
 
 let win: BrowserWindow;
 
+// const fs = (<any>window).require("fs");
+
 app.on('ready', createWindow)
 
 app.on('activate', () => {
@@ -33,7 +35,7 @@ function createWindow() {
 }
 
 ipcMain.on('getFiles', (event, arg) => {
-  const files = fs.readdirSync(__dirname)
+  // const files = fs.readdirSync(__dirname)
 
-  win.webContents.send('getFilesResponse', files)
+  // win.webContents.send('getFilesResponse', files)
 })
