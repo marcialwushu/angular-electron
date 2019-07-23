@@ -1,7 +1,7 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
-
+import * as fs from 'fs';
 
 let win: BrowserWindow;
 
@@ -35,7 +35,7 @@ function createWindow() {
 }
 
 ipcMain.on('getFiles', (event, arg) => {
-  // const files = fs.readdirSync(__dirname)
+  const files = fs.readdirSync(__dirname)
 
-  // win.webContents.send('getFilesResponse', files)
+  win.webContents.send('getFilesResponse', files)
 })
