@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var electron_1 = require("electron");
 var path = require("path");
 var url = require("url");
+var fs = require("fs");
 var win;
 // const fs = (<any>window).require("fs");
 electron_1.app.on('ready', createWindow);
@@ -24,7 +25,7 @@ function createWindow() {
     });
 }
 electron_1.ipcMain.on('getFiles', function (event, arg) {
-    // const files = fs.readdirSync(__dirname)
-    // win.webContents.send('getFilesResponse', files)
+    var files = fs.readdirSync(__dirname);
+    win.webContents.send('getFilesResponse', files);
 });
 //# sourceMappingURL=main.js.map

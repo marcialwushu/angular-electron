@@ -1,8 +1,8 @@
 
  <body>
   <h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
-  <div class="container" id="container">
-    <!-- <div class="form-container sign-up-container">
+  <div class="container right-panel-active" id="container">
+    <div class="form-container sign-up-container">
       <form action="#">
         <h1>Create Account</h1>
         <div class="social-container">
@@ -14,10 +14,10 @@
         <input type="text" placeholder="Name" />
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
-        <button (click)="signUp()">Sign Up</button>
+        <button [routerLink]="['/login']">Sign Up</button>
       </form>
-    </div> -->
-    <div class="form-container sign-in-container">
+    </div>
+    <!-- <div class="form-container sign-in-container">
       <form action="#">
         <h1>Sign in</h1>
         <div class="social-container">
@@ -29,21 +29,21 @@
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
         <a href="#">Forgot your password?</a>
-        <button [routerLink]="['/app-root']">Sign In</button>
+        <button (click)="signIn()">Sign In</button>
       </form>
-    </div>
+    </div> -->
     <div class="overlay-container">
       <div class="overlay">
-        <!-- <div class="overlay-panel overlay-left">
+        <div class="overlay-panel overlay-left">
           <h1>Welcome Back!</h1>
           <p>To keep connected with us please login with your personal info</p>
-          <button class="ghost" id="signIn" (click)="signIn()">Sign In</button>
-        </div> -->
-        <div class="overlay-panel overlay-right">
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <!-- <div class="overlay-panel overlay-right">
           <h1>Hello, Friend!</h1>
           <p>Enter your personal details and start journey with us</p>
-          <button class="ghost" id="signUp" [routerLink]="['/register']">Sign Up</button>
-        </div>
+          <button class="ghost" id="signUp" (click)="signUp()">Sign Up</button>
+        </div> -->
       </div>
     </div>
   </div>
