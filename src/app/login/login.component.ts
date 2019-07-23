@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
+export class LoginComponent implements OnInit {
 
+  constructor() { }
 
-
-export class AppComponent {
-  title = 'angular-electron';
+  ngOnInit() {
+  }
 
   signUpButton = document.getElementById('signUp');
   signInButton = document.getElementById('signIn');
@@ -27,7 +28,4 @@ export class AppComponent {
     })
   }
 
-
-
 }
-
