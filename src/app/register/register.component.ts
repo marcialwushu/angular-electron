@@ -9,7 +9,13 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  emailPatern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+  private _emailPatern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+  public get emailPatern() {
+    return this._emailPatern;
+  }
+  public set emailPatern(value) {
+    this._emailPatern = value;
+  }
 
   constructor(private quizService: QuizService, private route : Router) { }
 
