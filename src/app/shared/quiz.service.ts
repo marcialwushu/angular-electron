@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class QuizService {
 
   //--------------Properties-----------------------
-  readonly rootUrl = 'http://localhost:2690';
+  readonly rootUrl = 'http://localhost:54021';
 
 
   //---------------Helper Metods--------------------------
@@ -18,6 +18,11 @@ export class QuizService {
 
   //---------------Http Metods--------------------------
 
+  /**
+   * Insert Participant Service
+   * @param: name
+   * @param: email
+  */
   insertParticipant(name: string, email: string) {
     var body = {
       Name: name,

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
+
   private _emailPatern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   public get emailPatern() {
     return this._emailPatern;
@@ -17,11 +18,17 @@ export class RegisterComponent implements OnInit {
     this._emailPatern = value;
   }
 
+
   constructor(private quizService: QuizService, private route : Router) { }
 
   ngOnInit() {
   }
 
+  /**
+   *OnSubmit Method
+   * @param name
+   * @param email
+   */
   OnSubmit(name:string, email:string) {
     this.quizService.insertParticipant(name,email).subscribe(
       (data : any) => {

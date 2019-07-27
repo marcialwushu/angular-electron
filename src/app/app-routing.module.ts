@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ResultComponent } from './result/result.component';
+import { AuthGuard } from './auth/auth.guard';
 
 
 const routes: Routes = [
@@ -14,8 +15,8 @@ const routes: Routes = [
   { path: 'app-root', component: AppComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'navbar', component: NavbarComponent },
-  { path: 'quiz', component: QuizComponent },
-  { path: 'result', component: ResultComponent },
+  { path: 'quiz', component: QuizComponent, canActivate : [AuthGuard] },
+  { path: 'result', component: ResultComponent, canActivate : [AuthGuard] },
   { path: '',redirectTo:'/login',pathMatch:'full' }
 
 ];
