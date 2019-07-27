@@ -3,7 +3,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-<div class="row" >
+<div class="row" *ngIf="quizService.qns && this.quizService.qnProgress != 10">
   <div class="col s8 offset-s2">
     <span>Time Elapsed : </span>
     <div class="progress">
@@ -11,8 +11,8 @@
     </div>
     <div class="card blue-grey darken-1">
       <div class="card-content white-text">
-        <span class="card-title"></span>
-        <p></p>
+        <span class="card-title">{{quizService.qnProgress+1}}</span>
+        <p>{{ quizService.qns[quizService.qnProgress].Qn }}</p>
         <div >
           <img class="center"  style="width:350px;height:200px">
         </div>

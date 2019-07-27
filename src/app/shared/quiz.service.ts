@@ -9,6 +9,10 @@ export class QuizService {
 
   //--------------Properties-----------------------
   readonly rootUrl = 'http://localhost:54021';
+  qns: any[];
+  seconds: number;
+  timer;
+  qnProgress: number;
 
 
   //---------------Helper Metods--------------------------
@@ -29,6 +33,10 @@ export class QuizService {
       Email: email
     }
     return this.http.post(this.rootUrl + '/api/InsertParticipant', body);
+  }
+
+  getQuestions() {
+    return this.http.get(this.rootUrl + '/api/Question')
   }
 
 
