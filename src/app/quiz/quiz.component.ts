@@ -29,4 +29,15 @@ export class QuizComponent implements OnInit {
     }, 1000);
   }
 
+  Answer(qID, choice) {
+    this.quizService.qns[this.quizService.qnProgress].answer = choice;
+    localStorage.setItem('qns', JSON.stringify(this.quizService.qns));
+    this.quizService.qnProgress++;
+    localStorage.setItem('qnProgress', this.quizService.qnProgress.toString());
+    if (this.quizService.qnProgress == 10) {
+      clearInterval(this.quizService.timer);
+      this.router.navigate(['/result']);
+    }
+  }
+
 }
