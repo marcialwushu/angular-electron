@@ -40,10 +40,10 @@
             <ng-container *ngFor="let option of qn.Option;let j = index">
                 <li *ngIf="option != null" class="collection-item">
                   {{ option }}
-                    <span class="badge">
-                      <i class="material-icons green-text"></i>
+                    <span class="badge" *ngIf="qn.correct==j">
+                      <i class="material-icons green-text">check_circle</i>
                     </span>
-                    <span class="badge red-text"></span>
+                    <span class="badge red-text" *ngIf="qn.answer==j && qn.correct!=j">Incorrect</span>
                   </li>
             </ng-container>
 

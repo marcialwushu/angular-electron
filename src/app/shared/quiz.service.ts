@@ -47,7 +47,7 @@ export class QuizService {
    *
    */
   getQuestions() {
-    return this.http.get(this.rootUrl + '/api/Question')
+    return this.http.get(this.rootUrl + '/api/Question');
   }
 
   /**
