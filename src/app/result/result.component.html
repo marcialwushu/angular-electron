@@ -1,4 +1,7 @@
 <app-navbar></app-navbar>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <div class="row">
   <div class="col s8 offset-s2">
     <h2 class="header">Completed!</h2>
@@ -6,6 +9,19 @@
       <div class="card-image">
         <img src="../../assets/img/trophy.png" style="width: 250px;height: 250px;" alt="">
       </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h4>{{quizService.getParticipantName}}</h4>
+          <h3>{{quizService.correctAnswerCount}}/10</h3>
+          <span>Time Elapsed : {{quizService.displayTimeElapsed()}}</span>
+        </div>
+        <div class="card-action">
+          <button class="btn">Submit</button>
+        </div>
+      </div>
+      <a class="btn-floating halfway-fab waves-effect waves-light red">
+        <i class="material-icons">replay</i>
+      </a>
     </div>
   </div>
 </div>

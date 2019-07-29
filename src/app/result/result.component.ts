@@ -11,7 +11,7 @@ export class ResultComponent implements OnInit {
 
   emailPatern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
-  constructor(private quizService: QuizService, private router: Router) { }
+  constructor(public quizService: QuizService, private router: Router) { }
 
   ngOnInit() {
     this.quizService.getAnswer().subscribe(
