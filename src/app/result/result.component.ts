@@ -26,4 +26,14 @@ export class ResultComponent implements OnInit {
     );
   }
 
+  OnSubmit() {
+    this.quizService.submitScore().subscribe(() => {
+      this.restart();
+    })
+  }
+
+  restart() {
+    this.router.navigate(['/quiz']);
+  }
+
 }
