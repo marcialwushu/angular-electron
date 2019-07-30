@@ -1,16 +1,18 @@
 
     <app-topnavbar></app-topnavbar>
     <app-asidenavbar></app-asidenavbar>
+    <br>
+    <app-navbar></app-navbar>
+    <app-material></app-material>
 
           <!-- Quiz Coponent Begin -->
 
             <div class="content-wrapper">
                 <section class="content-header">
-                  <app-navbar></app-navbar>
-                  <app-material></app-material>
+
                   <section class="content">
                       <div class="row" *ngIf="quizService.qns && this.quizService.qnProgress != 10">
-                          <div class="col s8 offset-s2">
+                          <div class="col s8 offset-s8">
                             <span>Time Elapsed : {{ quizService.displayTimeElapsed() }}</span>
                             <div class="progress">
                               <div class="determinate" [style.width.%]="(quizService.qnProgress+1)*10"></div>
