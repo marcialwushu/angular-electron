@@ -3,5 +3,38 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css);
 @import url(https://cdn.bootcss.com/jvectormap/2.0.4/jquery-jvectormap.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.15/css/AdminLTE.min.css);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.15/css/skins/_all-skins.min.css);
+/* @import url(https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.15/css/skins/_all-skins.min.css); */
 
+.skin-blue .left-side, .skin-blue .main-sidebar, .skin-blue .wrapper {
+  background-color: #222d32;
+}
+
+.main-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  min-height: 100%;
+  width: 230px;
+  z-index: 810;
+  transition: width .3s ease-in-out,-webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,width .3s ease-in-out;
+  transition: transform .3s ease-in-out,width .3s ease-in-out,-webkit-transform .3s ease-in-out;
+}
+
+.sidebar {
+  padding-bottom: 10px;
+}
+
+.user-panel>.image>img {
+  width: 100%;
+  max-width: 45px;
+  height: auto;
+}
+.img-circle {
+  border-radius: 50%;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
