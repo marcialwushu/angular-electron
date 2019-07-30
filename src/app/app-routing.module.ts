@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'app-root', component: AppComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'navbar', component: NavbarComponent },
+
   { path: 'quiz', component: QuizComponent, canActivate : [AuthGuard] },
   { path: 'result', component: ResultComponent, canActivate : [AuthGuard] },
   { path: '',redirectTo:'/login',pathMatch:'full' }

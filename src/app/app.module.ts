@@ -12,6 +12,12 @@ import { QuizComponent } from './quiz/quiz.component';
 import { ResultComponent } from './result/result.component';
 import { QuizService } from './shared/quiz.service';
 import { AuthGuard } from './auth/auth.guard';
+import { MaterialComponent } from './layout/material/material.component';
+import { AsidenavbarComponent } from './layout/asidenavbar/asidenavbar.component';
+import { FooternavbarComponent } from './layout/footernavbar/footernavbar.component';
+import { SettingsnavbarComponent } from './layout/settingsnavbar/settingsnavbar.component';
+import { TopnavbarComponent } from './layout/topnavbar/topnavbar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +27,12 @@ import { AuthGuard } from './auth/auth.guard';
     NavbarComponent,
     QuizComponent,
     ResultComponent,
+    MaterialComponent,
+    AsidenavbarComponent,
+    FooternavbarComponent,
+    SettingsnavbarComponent,
+    TopnavbarComponent,
+    DashboardComponent,
 
   ],
   imports: [
