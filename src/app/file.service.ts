@@ -7,5 +7,24 @@ import { IpcRenderer } from 'electron';
 export class FileService {
   private ipc: IpcRenderer
 
-  constructor() { }
+  constructor() {
+    if ((<any>window).require){
+      try {
+        this.ipc = (<any>window).require('electron').ipcRenderer
+      } catch (error) {
+        throw error
+      }
+    } else {
+      console.warn('Could not load electron ipc')
+    }
+   }
+
+   async getFiles() {
+     return new Promise<string[]>((resolve, reject) => {
+       this.ipc.once("getFilesResponse", (event, arg) => {
+         resolve(arg);
+       });
+       this.ipc.send("getFiles");
+     })
+   }
 }
