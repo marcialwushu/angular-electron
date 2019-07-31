@@ -42,7 +42,7 @@ export class QuizComponent implements OnInit {
   }
 
   Answer(qID, choice) {
-    this.quizService.qns[this.quizService.qnProgress].answer = choice;
+    this.quizService.qns[this.quizService.qnProgress].answer = choice && qID;
     localStorage.setItem('qns', JSON.stringify(this.quizService.qns));
     this.quizService.qnProgress++;
     localStorage.setItem('qnProgress', this.quizService.qnProgress.toString());

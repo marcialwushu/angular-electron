@@ -12,7 +12,7 @@
 
                   <section class="content">
                       <div class="row" *ngIf="quizService.qns && this.quizService.qnProgress != 10">
-                          <div class="col s8 offset-s8">
+                          <div class="col s12 offset-s2">
                             <span>Time Elapsed : {{ quizService.displayTimeElapsed() }}</span>
                             <div class="progress">
                               <div class="determinate" [style.width.%]="(quizService.qnProgress+1)*10"></div>
@@ -30,7 +30,10 @@
                                   <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options;let i = index">
                                     <li *ngIf="option != null" class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">
                                       {{option}}
+                                      <br>
+                                      <button class="btn" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">Salvar</button>
                                     </li>
+
                                   </ng-container>
                                 </ul>
                               </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { QuizService } from '../shared/quiz.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  private _emailPatern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+  public get emailPatern() {
+    return this._emailPatern;
+  }
+  public set emailPatern(value) {
+    this._emailPatern = value;
+  }
+
+  imagePath: any = "../../assets/img/facebook-f-brands.svg";
+
+
+  constructor(private quizService: QuizService, private route: Router) { }
 
   ngOnInit() {
   }
@@ -26,6 +39,16 @@ export class LoginComponent implements OnInit {
     this.signInButton.addEventListener('click', () => {
       this.container.classList.remove("right-panel-active");
     })
+  }
+
+  OnSubmit(name:string, email:string) {
+    this.quizService.getParticipants(name,email).subscribe(
+      (data : any) => {
+        localStorage.clear();
+        localStorage.setItem('participant',JSON.stringify(data));
+        this.route.navigate(['/quiz']);
+      }
+    );
   }
 
 }

@@ -14,6 +14,7 @@ export class QuizService {
   timer;
   qnProgress: number;
   correctAnswerCount: number = 0;
+  participants: any[];
 
   //---------------Helper Metods--------------------------
 
@@ -63,7 +64,20 @@ export class QuizService {
     var body = JSON.parse(localStorage.getItem('participant'));
     body.Score = this.correctAnswerCount;
     body.TimeSpent = this.seconds;
-    return this.http.post(this.rootUrl + "/api/UpdateOutput", body);
+    return this.http.post(this.rootUrl + '/api/UpdateOutput', body);
+  }
+
+  getParticipant() {
+    var body = this.participants.map(x => x.Valeus);
+    return this.http.post(this.rootUrl + '/api/Values', body);
+  }
+
+  getParticipants(name: string, email: string) {
+    var body = {
+      Name: name,
+      Email: email
+    }
+    return this.http.post(this.rootUrl + '/api/Values',body);
   }
 
 
