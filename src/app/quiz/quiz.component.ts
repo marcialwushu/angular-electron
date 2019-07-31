@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuizService } from '../shared/quiz.service';
 
+
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',

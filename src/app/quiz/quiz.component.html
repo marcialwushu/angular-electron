@@ -27,7 +27,7 @@
                               </div>
                               <div class="card-action">
                                 <ul class="collection answer">
-                                  <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options;let i = index">
+                                  <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options ;let i = index">
                                     <li *ngIf="option != null" class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">
                                       {{option}}
                                       <br>
@@ -36,13 +36,23 @@
 
                                   </ng-container>
                                 </ul>
+
                               </div>
+
                             </div>
 
                           </div>
                         </div>
                   </section>
                 </section>
+                <!-- <table>
+                  <tbody>
+                    <tr *ngFor="let option of quizService.qns[quizService.qnProgress].Options; let i = index; trackBy: option?.QnID">
+                      <td>{{option.Qn}}</td>
+                      <td>{{option.Options}}</td>
+                    </tr>
+                  </tbody>
+                </table> -->
             </div>
 
           <!-- Quiz Component End -->
