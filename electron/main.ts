@@ -5,6 +5,7 @@ import * as fs from 'fs';
 
 let win: BrowserWindow;
 
+
 // const fs = (<any>window).require("fs");
 
 app.on('ready', createWindow)
