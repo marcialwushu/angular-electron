@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ResultComponent } from './result/result.component';
 import { AuthGuard } from './auth/auth.guard';
+import { QuestionnairComponent } from './questionnair/questionnair.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'quiz', component: QuizComponent, canActivate : [AuthGuard] },
   { path: 'result', component: ResultComponent, canActivate : [AuthGuard] },
+  { path: 'questionnair', component: QuestionnairComponent, canActivate: [AuthGuard] },
   { path: '',redirectTo:'/login',pathMatch:'full' }
 
 ];

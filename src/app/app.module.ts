@@ -19,6 +19,7 @@ import { FooternavbarComponent } from './layout/footernavbar/footernavbar.compon
 import { SettingsnavbarComponent } from './layout/settingsnavbar/settingsnavbar.component';
 import { TopnavbarComponent } from './layout/topnavbar/topnavbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { QuestionnairComponent } from './questionnair/questionnair.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     SettingsnavbarComponent,
     TopnavbarComponent,
     DashboardComponent,
+    QuestionnairComponent,
 
   ],
   imports: [
