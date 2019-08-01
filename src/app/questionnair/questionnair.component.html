@@ -10,6 +10,13 @@
     <p>
       questionnair works!
     </p>
+    <div>
+      <app-question [nextQuestion]="nextQuestion"></app-question>
+    </div>
+    <div>
+      <button *ngIf="!isOnLastQuestion" (click)="next()">Next</button>
+      <button>Finish</button>
+    </div>
     </section>
   </section>
 </div>
