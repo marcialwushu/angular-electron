@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as Survey from "survey-angular";
+
 
 @Component({
   selector: 'app-survey-questions',
