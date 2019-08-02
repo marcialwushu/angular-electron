@@ -10,12 +10,17 @@
     <p>
       questionnair works!
     </p>
-    <div>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow ng-tns-c1-0 ng-star-inserted">
       <app-question [nextQuestion]="nextQuestion"></app-question>
     </div>
-    <div>
-      <button *ngIf="!isOnLastQuestion" (click)="next()">Next</button>
-      <button>Finish</button>
+    <div class="row">
+      <div class="col-md-3 col-sm-12 col-xs-12 ">
+          <button class="btn btn-lg btn-success quiz-buttons" *ngIf="!isOnLastQuestion" (click)="next()">Next</button>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-12">
+          <button class="btn btn-lg btn-danger ng-tns-c1-0 ng-star-inserted">Finish</button>
+      </div>
     </div>
     </section>
   </section>
