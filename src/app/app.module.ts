@@ -20,6 +20,9 @@ import { SettingsnavbarComponent } from './layout/settingsnavbar/settingsnavbar.
 import { TopnavbarComponent } from './layout/topnavbar/topnavbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { QuestionnairComponent } from './questionnair/questionnair.component';
+import { QuestionComponent } from './questionnair/question/question.component';
+// import { SurveyComponent } from './survey/survey.component';
+// import { SurveyQuestionsComponent } from './survey/survey-questions/survey-questions.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { QuestionnairComponent } from './questionnair/questionnair.component';
     TopnavbarComponent,
     DashboardComponent,
     QuestionnairComponent,
+    QuestionComponent,
+    // SurveyComponent,
+    // SurveyQuestionsComponent,
 
   ],
   imports: [

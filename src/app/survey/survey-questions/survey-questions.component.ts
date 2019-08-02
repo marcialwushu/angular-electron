@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as Survey from "survey-angular";
+// import * as Survey from "survey-angular";
 
 
 @Component({
@@ -58,7 +58,10 @@ export class SurveyQuestionsComponent implements OnInit {
               }
           ]
       }
-  ],
+  ]
+  };
+  onSurveySaved(survey) {
+    this.json = survey;
   }
 
   constructor() { }
