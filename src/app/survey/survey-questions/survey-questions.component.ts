@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import * as Survey from "survey-angular";
-
 
 @Component({
   selector: 'app-survey-questions',
@@ -8,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./survey-questions.component.css']
 })
 export class SurveyQuestionsComponent implements OnInit {
-  title = "SurveyJS Angular"
+
+  /**
+   *
+   * title = "SurveyJS Angular"
   json = {
     pages: [
       {
@@ -60,9 +61,19 @@ export class SurveyQuestionsComponent implements OnInit {
       }
   ]
   };
-  onSurveySaved(survey) {
-    this.json = survey;
-  }
+   *
+   */
+
+  /**
+   * Load surveyJS json static
+   * import * as Survey from "survey-angular";
+   * Error dependencia modulo KnockoutObservable
+   *
+   * onSurveySaved(survey) {
+     this.json = survey;
+   }
+
+   */
 
   constructor() { }
 

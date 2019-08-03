@@ -1,9 +1,17 @@
-/* @import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
+
+/* @import url('../../../../node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css');
+@import url('../../../../node_modules/admin-lte/bower_components/font-awesome/css/font-awesome.min.css');
+@import url('../../../../node_modules/admin-lte/bower_components/jvectormap/jquery-jvectormap.css');
+@import url('../../../../node_modules/admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css');
+@import url('../../../../node_modules/admin-lte/dist/css/AdminLTE.min.css'); */
+
+
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css);
 @import url(https://cdn.bootcss.com/jvectormap/2.0.4/jquery-jvectormap.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.15/css/AdminLTE.min.css);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.15/css/skins/_all-skins.min.css); */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.15/css/skins/_all-skins.min.css);
 @import url(https://admin-lte-ng6.firebaseapp.com/styles.b541fb7aaba4581f113b.css);
 
 .skin-blue .main-header .logo {
