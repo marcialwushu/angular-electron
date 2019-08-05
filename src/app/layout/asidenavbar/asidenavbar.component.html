@@ -35,7 +35,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a [routerLink]="['/questionnair']"><i class="fa fa-circle-o"></i> TESTE v1</a></li>
-            <li [routerLink]="['/survey']"><a href="#"><i class="fa fa-circle-o"></i> TESTE v2</a></li>
+            <li [routerLink]="['/login']"><a href="#"><i class="fa fa-circle-o"></i> TESTE v2</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -47,7 +47,7 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+            <li><a [routerLink]="['/survey']" href="#"><i class="fa fa-circle-o"></i> Top Survey</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Boxed</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Fixed</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
@@ -62,9 +62,9 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a [routerLink]="['/survey']">
             <i class="fa fa-pie-chart"></i>
-            <span>Charts</span>
+            <span>Charts JS</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>

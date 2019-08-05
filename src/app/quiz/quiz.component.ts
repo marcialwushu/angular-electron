@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuizService } from '../shared/quiz.service';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -9,10 +11,15 @@ import { QuizService } from '../shared/quiz.service';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+  data$:Observable<any>;
 
   constructor(private router : Router, public quizService : QuizService) { }
 
+
+  // this.data$ = this.quizService.getQuestions();
+
   ngOnInit() {
+
     if (parseInt(localStorage.getItem('seconds')) > 0) {
       this.quizService.seconds = parseInt(localStorage.getItem('seconds'));
       this.quizService.qnProgress = parseInt(localStorage.getItem('qnProgress'));
@@ -33,6 +40,7 @@ export class QuizComponent implements OnInit {
       );
     }
 
+
   }
 
   startTimer() {
@@ -51,6 +59,11 @@ export class QuizComponent implements OnInit {
       clearInterval(this.quizService.timer);
       this.router.navigate(['/result']);
     }
+  }
+
+  getArrayFromNumber(lenght) {
+
+    return new Array(lenght/5);
   }
 
 }
