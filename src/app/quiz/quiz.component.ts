@@ -40,7 +40,6 @@ export class QuizComponent implements OnInit {
       );
     }
 
-
   }
 
   startTimer() {

@@ -28,30 +28,33 @@
                               <div class="card-action"  >
                                 <!-- *ngIf="data$ | async as data" -->
                                 <ul class="collection answer">
-                                  <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options;let i = index;">
+                                  <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options | slice:0:10; let i = index;">
                                     <li *ngIf="option != null" class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">
                                       {{option}}
                                       <br>
-                                      <button class="btn" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">Salvar</button>
+                                      <input type="checkbox" ng-model="leader" *ngIf="option != null" class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)"><label></label><br/>
+                                      <!-- <button class="btn" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">Salvar</button> -->
+                                      <mdb-checkbox [default]="true"></mdb-checkbox>
                                     </li>
 
                                   </ng-container>
+
                                 </ul>
+                                <button class="btn" (click)="Answer(quizService.qns[quizService.qnProgress].QnID)">Salvar</button>
+                                <div>
+                                  <span>Name: {{quizService.getUserName()}}</span>
+                                </div>
 
-
-
-                              </div>
-                              <!-- Pagination  -->
-
-                              <nav aria-label="Page navigation example">
+                                <nav aria-label="Page navigation example" style="background-color: white!important;">
                                   <ul class="pagination">
                                     <li class="page-item">
                                       <a class="page-link" href="#" aria-label="Previous">
                                         <span aria-hidden="true">&laquo;</span>
                                       </a>
                                     </li>
-                                    <li *ngFor="let i of getArrayFromNumber(data.lenght);let in = index" class="page-item">
+                                    <li *ngFor="" class="page-item">
                                       <a class="page-link" href="#">1</a></li>
+
 
                                     <li class="page-item">
                                       <a class="page-link" href="#" aria-label="Next">
@@ -60,6 +63,9 @@
                                     </li>
                                   </ul>
                                 </nav>
+
+                              </div>
+                              <!-- Pagination  -->
 
                             </div>
 

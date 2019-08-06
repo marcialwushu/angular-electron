@@ -21,6 +21,7 @@ import { TopnavbarComponent } from './layout/topnavbar/topnavbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { QuestionnairComponent } from './questionnair/questionnair.component';
 import { QuestionComponent } from './questionnair/question/question.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // import { SurveyComponent } from './survey/survey.component';
 // import { SurveyQuestionsComponent } from './survey/survey-questions/survey-questions.component';
 
@@ -49,7 +50,8 @@ import { QuestionComponent } from './questionnair/question/question.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [QuizService, AuthGuard],
   bootstrap: [AppComponent]

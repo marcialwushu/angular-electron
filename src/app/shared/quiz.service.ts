@@ -80,5 +80,9 @@ export class QuizService {
     return this.http.post(this.rootUrl + '/api/Values',body);
   }
 
+  getUserName() {
+    return this.http.get(this.rootUrl + 'api/Participants');
+  }
+
 
 }
