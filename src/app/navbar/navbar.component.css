@@ -1,0 +1,31 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+.nav-wrapper{min-height:56px;height:auto}
+
+nav .nav-wrapper{position:relative;height:100%}
+.nav-wrapper{min-height:64px}nav,nav .nav-wrapper i,nav a.button-collapse,nav a.button-collapse i{height:64px;line-height:64px}
+/* nav .brand-logo i,nav .brand-logo [class^="mdi-"],nav .brand-logo [class*="mdi-"],nav .brand-logo i.material-icons{float:left;margin-right:255px} */
+
+nav .brand-logo {
+  float: left;
+  margin-left: 550px;
+}
+
+.hide-on-med-and-down{display:none !important}
+
+.row .col.s8{width:66.6666666667%;margin-left:auto;left:auto;right:auto}
+
+.row .col.offset-s2{margin-left:16.6666666667%}
+
+.blue-grey{background-color:#607d8b !important}
+
+.container .row{margin-left:-.75rem;margin-right:-.75rem}
+
+.row{margin-left:auto;margin-right:auto;margin-bottom:20px}
+.row:after{content:"";display:table;clear:both}
+.row .col{float:left;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 .75rem;min-height:1px}
+.row .col[class*="push-"],.row .col[class*="pull-"]{position:relative}
+
+ul li a{display:block;overflow:hidden;position:relative;width:100%;height:100%;background-color:transparent;-webkit-box-shadow:none;box-shadow:none;color:#fff;line-height:56px;z-index:1}
+

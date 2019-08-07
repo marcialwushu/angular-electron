@@ -1,20 +1,21 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
-/* @import url('../../../../node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css');
+@import url('../../../../node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css');
 @import url('../../../../node_modules/admin-lte/bower_components/font-awesome/css/font-awesome.min.css');
 @import url('../../../../node_modules/admin-lte/bower_components/jvectormap/jquery-jvectormap.css');
 @import url('../../../../node_modules/admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css');
-@import url('../../../../node_modules/admin-lte/dist/css/AdminLTE.min.css'); */
+@import url('../../../../node_modules/admin-lte/dist/css/AdminLTE.min.css');
 
 
-@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
+/* @import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css);
 @import url(https://cdn.bootcss.com/jvectormap/2.0.4/jquery-jvectormap.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.15/css/AdminLTE.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.15/css/skins/_all-skins.min.css);
-@import url(https://admin-lte-ng6.firebaseapp.com/styles.b541fb7aaba4581f113b.css);
+@import url(https://admin-lte-ng6.firebaseapp.com/styles.b541fb7aaba4581f113b.css); */
 
-.skin-blue .main-header .logo {
+/* .skin-blue .main-header .logo {
   background-color: #367fa9;
   color: #fff;
   border-bottom: 0 solid transparent;
@@ -150,4 +151,139 @@ b {
 
 
 
+ */
 
+ /*  STYLE TESTE TOP NAVBAR */
+
+/*
+.skin-blue .main-header .navbar {
+    background-color: #3c8dbc;
+}
+.main-header .navbar {
+    -webkit-transition: margin-left .3s ease-in-out;
+    -o-transition: margin-left .3s ease-in-out;
+    transition: margin-left .3s ease-in-out;
+    margin-bottom: 0;
+    margin-left: 230px;
+    border: none;
+    min-height: 50px;
+    border-radius: 0;
+}
+@media (min-width: 768px)
+.navbar-static-top {
+    border-radius: 0;
+}
+.navbar-static-top {
+    z-index: 1000;
+    border-width: 0 0 1px;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+
+@media (max-width: 991px)
+.navbar-custom-menu>.navbar-nav {
+    float: right;
+}
+@media (max-width: 991px)
+.navbar-custom-menu .navbar-nav {
+    margin: 0;
+    float: left;
+}
+@media (min-width: 768px)
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
+.navbar-nav {
+    margin: 7.5px -15px;
+}
+
+
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+@media (max-width: 991px)
+.navbar-custom-menu>.navbar-nav>li {
+    position: static;
+}
+.navbar-custom-menu>.navbar-nav>li {
+    position: relative;
+}
+@media (max-width: 991px)
+.navbar-custom-menu .navbar-nav>li {
+    float: left;
+}
+@media (min-width: 768px)
+.navbar-nav>li {
+    float: left;
+}
+.nav>li {
+    position: relative;
+    display: block;
+}
+.dropdown, .dropup {
+    position: relative;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.skin-blue .main-header .navbar .nav>li>a {
+    color: #fff;
+}
+@media (max-width: 991px)
+.navbar-custom-menu .navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+i {
+    font-style: italic;
+}
+
+ */

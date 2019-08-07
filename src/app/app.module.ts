@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -21,7 +24,7 @@ import { TopnavbarComponent } from './layout/topnavbar/topnavbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { QuestionnairComponent } from './questionnair/questionnair.component';
 import { QuestionComponent } from './questionnair/question/question.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // import { SurveyComponent } from './survey/survey.component';
 // import { SurveyQuestionsComponent } from './survey/survey-questions/survey-questions.component';
 
@@ -51,8 +54,12 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     FormsModule,
     HttpClientModule,
     NgxPaginationModule,
-    MDBBootstrapModule.forRoot()
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
+    // MDBBootstrapModule.forRoot()
   ],
+  exports: [BsDropdownModule, TooltipModule,ModalModule],
   providers: [QuizService, AuthGuard],
   bootstrap: [AppComponent]
 })

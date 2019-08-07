@@ -29,12 +29,16 @@
                                 <!-- *ngIf="data$ | async as data" -->
                                 <ul class="collection answer">
                                   <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options | slice:0:10; let i = index;">
-                                    <li *ngIf="option != null" class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">
+                                    <li *ngIf="option != null" class="collection-item" >
+                                      <!-- (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)" -->
                                       {{option}}
                                       <br>
                                       <input type="checkbox" ng-model="leader" *ngIf="option != null" class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)"><label></label><br/>
                                       <!-- <button class="btn" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">Salvar</button> -->
-                                      <mdb-checkbox [default]="true"></mdb-checkbox>
+                                      <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                      </div>
                                     </li>
 
                                   </ng-container>
@@ -73,14 +77,7 @@
                         </div>
                   </section>
                 </section>
-                <!-- <table>
-                  <tbody>
-                    <tr *ngFor="let option of quizService.qns[quizService.qnProgress].Options; let i = index; trackBy: option?.QnID">
-                      <td>{{option.Qn}}</td>
-                      <td>{{option.Options}}</td>
-                    </tr>
-                  </tbody>
-                </table> -->
+
             </div>
 
           <!-- Quiz Component End -->
